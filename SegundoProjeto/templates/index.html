@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Primeira View</title>
+    <link rel="stylesheet" href="/static/styles/main.css">
+</head>
+<body>
+    <h1>Minha primeira view Flask</h1>
+    <p>Conteúdo</p>
+
+    {% if titulo == 'Página Flask' %}
+        <p>{{ titulo | upper }}</p>
+    {% elif titulo == 'Outro valor' %}
+        <p>Quase lá</p>
+    {% else %}
+        <p>Valor errado</p>
+    {% endif %}
+
+    <p>{{ outro }}</p>
+    {% for elemento in lista %}
+        <li>Item {{ loop.index }}: {{ elemento }}</li>
+    {% endfor %}
+</body>
+</html>
